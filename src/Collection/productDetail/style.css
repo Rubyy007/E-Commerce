@@ -1,0 +1,53 @@
+.spic img{
+    width: 100px ;
+    height: 120px;
+}
+.spic{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mainpic{
+   display: flex;
+   padding-right: 3rem;
+   justify-content: center;
+   align-items: center;
+}
+.mainpic img{
+    width: 420px;
+    height: 500px;
+}
+.details{
+    padding-top: 8rem;
+}
+.details h3{
+    font-weight: 800;
+    color: brown;
+    
+}
+.details button{
+    padding: 1rem;
+    border: 1px solid #c77af3;
+    background-color: white;
+    margin-right: 5%;
+}
+.details button:active{
+    background-color: rgb(219, 217, 214);
+}
+.addcartbtn{
+    margin:20px 0px ;
+    border: none !important;
+    background-color: red !important;
+    color: white;
+    width: 100%;
+}
+.buynowbtn{
+    border: none !important;
+    background-color: rgb(39, 156, 39) !important;
+    color: white;
+    width: 100%;
+}
+.mainproduct{
+    display: flex;
+}

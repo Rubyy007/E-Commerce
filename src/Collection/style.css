@@ -1,0 +1,48 @@
+.totalbody{
+    backface-visibility: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    padding: 4rem;
+    row-gap: 30px;
+}
+.cardbody:hover{
+box-shadow: 1px 1px 20px #3d52a0;
+}
+.cardbody button:hover{
+    color: white;
+    box-shadow: 1px 1px 20px white;
+
+}
+.cardbody button{
+   background-color: transparent;
+   padding: 10px;
+   border: 1px solid black;
+   margin-left:18%;
+   cursor: pointer;
+}
+.cardbody{
+    transition: 0.4s;
+    display: inline-block;
+    width:250px;
+    height: 380px;
+    color: black;
+    font-weight: 800;
+   
+    text-wrap: wrap;
+
+   
+
+}
+.pricediv{
+    text-wrap: wrap;
+    width: 100%;
+padding: 0 2px 0px 4px;
+}
+.pricediv p{
+    font-size: 80%;
+}
+.cardbody img{
+ height: 66%;
+    width: 100%;
+}

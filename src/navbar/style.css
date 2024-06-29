@@ -1,0 +1,123 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    width: 100%;
+}
+
+.navbar {
+    padding: 18px;
+    display: flex;
+   backface-visibility: hidden;
+    list-style: none;
+    justify-content: flex-end;
+    background-color:#ede8f5;
+}
+
+.navbar li {
+
+    height: 50px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #3d52a0;
+    font-size: large;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.sidebar {
+    transition: 0.7s;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    top: 0;
+    width: 250px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    right: 0;
+    box-shadow: -4px 2px 5px rgba(0, 0, 0, 0.4);
+    padding: 0;
+    background-color:#ede8f5;
+    height: 100vh;
+}
+.sidebar li:nth-child(1){
+    width: 100%;
+    justify-content: flex-end;
+}
+.cls{
+    padding: 8px;
+    border: none;
+}
+.cls:hover{
+  background-color: red;
+  border: none;
+  color: white;
+}
+.sidebar li {
+    width: 100%;
+    padding: 10px;
+    border: none;
+
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    padding: 2%;
+}
+
+nav li:hover {
+    border-bottom: 4px solid #8697c4;
+}
+#tittle{
+    font-size: x-large;
+}
+nav li:first-child {
+    margin-right: auto;
+    border: none;
+    background-color: transparent;
+    
+}
+@media (min-width:800px){
+    .menu{
+      display: none;
+    }
+    
+}
+@media (max-width:800px){
+    .navbar li{
+        display: none;
+    }
+    .navbar li:first-child{
+        display: flex;
+        padding: 0;
+        margin-left: -40px;
+    }
+    .navbar button {
+        padding:4px;
+        margin-top:auto;
+    }
+    #tittle{
+        font-size: x-large;
+        
+    }
+}
+@media (max-width:500px){
+    .sidebar{
+        width: 100vw;
+        font-size: larger;
+        background-color: #3d52a0;
+    }
+    .sidebar button{
+        background-color: red;
+    }
+
+}

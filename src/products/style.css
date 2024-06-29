@@ -1,0 +1,97 @@
+.popular{
+    display: flex;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-direction: row;
+    overflow: scroll;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem;
+    margin: 2rem 6rem 2rem 6rem;
+}
+/* .menstopcon{
+    background-color: aqua;
+    display: flex;
+    overflow-y: scroll;
+    justify-content: center;
+
+}
+.cardbox{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+*/
+.popular::-webkit-scrollbar{
+    visibility: hidden;
+}
+.menscard{
+
+    display: flex;
+    width: 230px;
+    background-color:black;
+    min-height: 250px !important;
+    justify-content: center;
+    align-items: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.4s;
+    opacity: 0.7;
+}
+.menscard:hover{
+    transform: scale(1.2);
+    opacity: 1;
+} 
+.btnlike{
+    max-width: 50px;
+}
+
+hr{
+    width: 17rem;
+    border: 3px solid #3d52a0;
+    transition: 0.4s;
+margin-top: 2%;
+margin-bottom: 3%;
+}
+hr:hover{
+    transform: scale(1.2);
+}
+.menscard button{
+    margin-bottom: 10%;
+    padding: 12px;
+    backdrop-filter: blur(50px);
+    width: 50%;
+    background: transparent;
+    border: 1px solid #3d52a0;
+    font-weight: 600;
+    height: fit-content;
+}
+.menscard button:hover{
+    color: #3d52a0;
+}
+
+@media (max-width:801px){
+ .menscard{
+   min-width: 150px;
+   height: 245px;
+ }
+ .cardbox .btnlike{
+    border-color: red;
+    
+ }
+ .popular{
+    margin: 0;
+    gap: 2px;
+    padding: 1rem;
+ }
+ .popular button{
+    padding: 5%;
+ }
+
+ .menstopcon{
+    padding:0px 20px;
+
+ }  
+
+}

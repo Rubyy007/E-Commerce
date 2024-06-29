@@ -1,0 +1,34 @@
+.footerCon{
+    padding: 20px;
+    text-align: center;
+}
+.Grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+    
+}
+.grid-items a{
+    display: block;
+    text-decoration: none;
+    color: #3d52a0;
+    padding: 6px;
+    font-size: 18px;
+
+}
+.grid-items a:hover{
+    color: red;
+}
+.footText{
+    text-align: center;
+    padding: 40px 20%;
+}
+.footText a{
+    text-decoration: none;
+    padding: 10px;
+}
+.footText a:hover{
+    color: #3d52a0;
+}

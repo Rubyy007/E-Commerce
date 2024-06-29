@@ -1,0 +1,11 @@
+:root{
+    -main-purple:#3d52a0;
+    -light-purple:#7091e6;
+    -dark-purple:#8697c4;
+    -dark-light:#adbbda;
+    -over-light:#ede8f5;
+}
+body{
+    background-color:#ede8f5;
+    backface-visibility: hidden;
+}
