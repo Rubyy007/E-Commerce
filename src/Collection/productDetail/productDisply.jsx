@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from "../../navbar/index"
 import "./style.css"
+import { shopContext } from '../../context/Context'
+
 function productDisply(props) {
   const { product } = props
-  console.log("display", product);
+  const {addToCart} = useContext(shopContext)
   return (
     <>
-      <Navbar />
+              <Navbar />
       <div className='mainproduct'>
         <div className="spic">
           <img src={product.image} alt='image error' />
@@ -26,7 +28,7 @@ function productDisply(props) {
             <button>X</button>
             <button>XL</button>
             <button>XXL</button>
-            <button className='addcartbtn' >Add To Cart</button>
+            <button onClick={()=>addToCart(product.id)} className='addcartbtn' >Add To Cart</button>
             <button className='buynowbtn' >Buy Now</button>
             
         </div>

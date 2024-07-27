@@ -4,6 +4,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import BrowserRouter and necessary components
 import "./index.css";
+import Cart from "./cart/cart.jsx"
 import ContextProvider from './context/Context.jsx';
 import CategoryItems from "./Collection/categoryItems.jsx";
 import Register from './LoginReg/Reg.jsx';
@@ -19,8 +20,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path=':productId' element={<ProductDetail/>}/>
           </Route>
         <Route path="/mensCollection" element={<CategoryItems category='men' />} />
-        <Route path="/womenCollection" element={<CategoryItems category='women' />} />
         <Route path="/loginpage" element={<Login />} />
+        <Route path="/womenCollection" element={<CategoryItems category='women' />} />
+        <Route path="/cart" element={<Cart/>} />
         <Route path="/regPage" element={<Register />} />
         <Route path="/childCollection" element={<CategoryItems category='child' />} />
       </Routes>

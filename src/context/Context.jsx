@@ -1,15 +1,40 @@
-import React, { createContext } from "react"; // Import React as well
-
+import React, { createContext, useState } from "react";
 import data from "../datasets/products";
-export const shopContext = createContext(data);
-
+export const shopContext = createContext(); // Create context without initial value
 const ContextProvider = (props) => {
-    const contextValue =  { data };
-    return (
-        <shopContext.Provider value={contextValue}> {/* Corrected syntax */}
-            {props.children}
-        </shopContext.Provider>
-    );
-};
+  // Function to initialize default cart state
+  const getDefaultCart = () => {
+    let cart = {};
+    data.forEach((product) => {
+      cart[product.id] = 0; // Initialize each product's quantity to 0
+    });
+    return cart;
+  };
 
-export default ContextProvider; // Export default as ContextProvider
+  const [cartItems, setCartItems] = useState(getDefaultCart());
+
+  const addToCart = (itemId) => {
+    setCartItems((prev) => ({
+      ...prev,
+      [itemId]: prev[itemId] + 1 // Increment quantity of the item in cart
+    }));
+  };
+  const removeCart = (itemId) => {
+      if (cartItems[itemId] > 0) { // Check if item quantity is greater than 0
+        setCartItems((prev) => ({
+            ...prev,
+            [itemId]: prev[itemId] - 1 // Decrement quantity of the item in cart
+        }));
+    }
+};
+  const contextValue = { data, cartItems, addToCart, removeCart };
+
+  console.log("context", cartItems);
+
+  return (
+    <shopContext.Provider value={contextValue}>
+      {props.children}
+    </shopContext.Provider>
+  );
+};
+export default ContextProvider;

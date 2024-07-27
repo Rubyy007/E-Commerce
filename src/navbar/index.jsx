@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import "./style.css"
 import { Link } from 'react-router-dom'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons/faCartPlus'
 function navbar() {
 const [openDisplay , setopenDisplay] = useState('none')
     const openSiedbar=()=>{
@@ -24,6 +25,8 @@ const closeSidebar =()=>{
                 </li>
                 <li> <Link to='/loginPage'>Login</Link>
                 </li>
+                <li> <Link to='/cart'><FontAwesomeIcon icon={faCartPlus} /></Link>
+                </li>
                 <button className='menu' style={{fontSize:'20px',border:'none',background:'transparent',cursor:'pointer'}} onClick={openSiedbar}>Menu</button>
             </ul>
             <ul className='sidebar' style={{display:openDisplay}} >
@@ -36,6 +39,8 @@ const closeSidebar =()=>{
                 <li> <Link to='/childCollection'>Child Wear</Link>
                 </li>
                 <li> <Link to='/loginPage'>Login</Link>
+                </li>
+                <li> <Link to='/cart'>Login</Link>
                 </li>
             </ul>
         </nav>

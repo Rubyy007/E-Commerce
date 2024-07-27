@@ -7,8 +7,8 @@ import "./style.css"
 import ProductDetails from './productDetails'
 function categoryItems(props) {
  
- const   {data}   = useContext(shopContext)
- console.log( 'from cateitem',data);
+ const   {data , cartItem}   = useContext(shopContext)
+
     return (
     <div>
 <Navbar/>

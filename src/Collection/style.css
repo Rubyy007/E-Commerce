@@ -10,7 +10,8 @@
 box-shadow: 1px 1px 20px #3d52a0;
 }
 .cardbody button:hover{
-    color: white;
+    color: purple;
+
     box-shadow: 1px 1px 20px white;
 
 }
@@ -21,10 +22,18 @@ box-shadow: 1px 1px 20px #3d52a0;
    margin-left:18%;
    cursor: pointer;
 }
+.cartbutton{
+
+    font-size: 10px !important;
+}
+.cartbutton span{
+    color:blue;
+}
 .cardbody{
     transition: 0.4s;
     display: inline-block;
     width:250px;
+    overflow: hidden;
     height: 380px;
     color: black;
     font-weight: 800;
@@ -37,7 +46,7 @@ box-shadow: 1px 1px 20px #3d52a0;
 .pricediv{
     text-wrap: wrap;
     width: 100%;
-padding: 0 2px 0px 4px;
+    padding: 4px;
 }
 .pricediv p{
     font-size: 80%;
