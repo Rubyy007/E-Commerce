@@ -1,12 +1,21 @@
 import React, { useContext } from 'react'
 import { shopContext } from '../context/Context'
-
+import Product from "../datasets/products"
+import CartItem from './cartItem'
 function cart() {
-    const {data,addToCart,removeCart,cartItems} = useContext(shopContext)
+    const {cartItems} = useContext(shopContext)
  
     return (
-        <>    <div>{data.id}cart</div>
-    <div>{cartItems.id}name</div>
+        <>    {
+          Product.map((product,i)=>{
+            if(cartItems[product.id] !== 0){
+             return(
+
+               <CartItem key={i} data={product}></CartItem>
+             ) 
+            }
+          })
+        }
     </>
 
   )

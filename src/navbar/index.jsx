@@ -40,7 +40,7 @@ const closeSidebar =()=>{
                 </li>
                 <li> <Link to='/loginPage'>Login</Link>
                 </li>
-                <li> <Link to='/cart'>Login</Link>
+                <li> <Link to='/cart'>cartItems</Link>
                 </li>
             </ul>
         </nav>

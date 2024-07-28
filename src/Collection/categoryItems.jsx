@@ -7,12 +7,11 @@ import "./style.css"
 import ProductDetails from './productDetails'
 function categoryItems(props) {
  
- const   {data , cartItem}   = useContext(shopContext)
+ const   {data }   = useContext(shopContext)
 
     return (
     <div>
 <Navbar/>
-
 <div className='totalbody'>
 {
     data.map((item , i)=>{
